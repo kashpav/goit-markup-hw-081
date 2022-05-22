@@ -1,0 +1,121 @@
+.soc-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.soc-list__item {
+    &+& { 
+        margin-left: 10px;
+        }
+}
+    
+.soc-list__link--grey {
+    fill: #AFB1B8;
+}
+
+.soc-list__link {
+    &:hover,
+    &:focus {
+            background-color: var(--accent-color);
+            fill: #FFFFFF;
+        }
+}
+
+.face {
+    display: block;
+}
+
+.team-list {
+    
+    justify-content: space-between;
+    &__photo {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    @media screen and (max-width:1199px) {
+            &__photo:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        display: flex; 
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        margin-left: -30px;
+    }
+}
+
+.team-list__photo {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: calc(100%/2 - 30px);
+        margin-left: 30px;
+        &:nth-last-child(-n+2) {
+                margin-bottom: 0;
+                                }
+    }
+
+    @media screen and (min-width:1200px) {
+        width: calc(100%/4 - 30px);
+        margin-left: 30px;
+        margin-bottom: 0;
+        }
+}
+
+.team-section {
+    background-color: var(--team-background-color);
+}
+
+.team-card {
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width:1200px) {
+        padding-bottom: 30px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--header-color);
+        margin-bottom: 10px;
+    }
+
+    &__duty {
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--text-color);
+    }
+}
+
+.team-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-color);
+    margin-bottom: 30px;
+
+    @media screen and (min-width:1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+
+    }
+}
