@@ -1098,6 +1098,12 @@ textarea {
   }
 }
 
+.face img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .constant-clients {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -1444,6 +1450,8 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .project {
+    display: flex;
+    flex-direction: column;
     width: calc(100%/2 - 30px);
     margin-left: 30px;
   }
@@ -1471,13 +1479,18 @@ textarea {
 }
 
 .project-description-block {
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
   padding-top: 20px;
   padding-left: 24px;
   padding-bottom: 20px;
   padding-right: 24px;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .project-description-block {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .projects-name {
@@ -1521,5 +1534,20 @@ textarea {
 
 .project-item:focus .products-cover-text {
   transform: translateY(-100%);
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */
