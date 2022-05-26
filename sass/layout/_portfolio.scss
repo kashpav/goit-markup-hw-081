@@ -14,9 +14,6 @@
     padding: 6px 22px;
     border: transparent;
 
-    margin-right: 8px;
-    margin-bottom: 15px;
-
     @media screen and (min-width:768px) {
             margin-bottom: 0;
             margin-right: 0;
@@ -35,16 +32,28 @@
     }
 }
 
+.button-item {
+    @media screen and (max-width:767px) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+    }
+}
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 
     @media screen and (min-width:768px) {
             justify-content: center;
-            padding-bottom: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 0;
+        }
+
+    @media screen and (min-width:1200px) {
+        // justify-content: center;
+        margin-bottom: 50px;
+        // padding-bottom: 0;
         }
     }
 
